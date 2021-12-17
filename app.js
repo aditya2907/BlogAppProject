@@ -29,7 +29,6 @@ const postSchema = {
 		required: true
 	}
 }
-
 const Post = mongoose.model("Post", postSchema);
 
 app.get("/", function (req, res) {
@@ -70,9 +69,9 @@ app.post("/compose", function (req, res) {
 });
 
 app.get("/posts/:postId", function (req, res) {
-
+	
 	const requestedPostId = req.params.postId;
-  
+
 	Post.findOne({ _id: requestedPostId }, function (err, posts) {
 	  res.render("post", {
 		title: posts.title,
@@ -80,8 +79,7 @@ app.get("/posts/:postId", function (req, res) {
 	  });
 	});
   
-  });
-
+});
 
 app.listen(3000, function () {
 	console.log("Server started on port 3000");
