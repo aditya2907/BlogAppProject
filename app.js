@@ -20,8 +20,14 @@ mongoose.connect("mongodb://localhost:27017/blogDB", { useNewUrlParser: true });
 
 
 const postSchema = {
-	title: String,
-	content: String
+	title: {
+		type: String,
+		required: true
+	},
+	content: {
+		type: String,
+		required: true
+	}
 }
 
 const Post = mongoose.model("Post", postSchema);
