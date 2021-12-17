@@ -5,20 +5,18 @@
 <div>
     
     <form action="/compose" method="POST">
-
-        <div class="form-group">
-            <label for="title">Title</label><br>
-            <input type="text" class="form-control" name="postTitle" width="" required="true">
+        <div class="mb-3">
+            <label for="title" class="form-label">Blog Title</label><br>
+            <input type="text" class="form-control" name="postTitle" placeholder="Enter Blog Title" width="" required="true">
         </div>
-        <div class="form-group">
-            <label for="post">Post</label><br>
-            <textarea name="postBody" class="form-control" id="" cols="30" rows="5" required="true"></textarea>
+        <div class="mb-3">
+            <label for="post" class="form-label">Blog Post</label><br>
+            <textarea class="form-control" name="postBody" placeholder="Enter Blog" id="" cols="30" rows="5" required="true"></textarea>
         </div>
         <br>
-        <div class="form-group" >
+        <div class="mb-3">
             <button type="submit" class="btn btn-primary">Publish</button>
         </div>
-
     </form>
 </div>
 
