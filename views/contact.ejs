@@ -2,26 +2,31 @@
     
     <h2>Contact Me!</h2>
 
-    <form action="mailto:chintuisnew@gmail.com" method="post" enctype="text/plain">
+    <form action="/contact" method="POST">
         <div class="mb-3">
             <label for="name" class="form-label">Your Name</label>
-            <input type="text" class="form-control" name="name" id="name" placeholder="Enter Your Name" required=true>
+            <input type="text" class="form-control" name="contactName" id="name" placeholder="Enter Your Name" required=true>
         </div>
         <div class="mb-3">
             <label for="email" class="form-label">Email address</label>
-            <input type="email" class="form-control" name="email" id="email" placeholder="Enter Your Email Address" required="true">
+            <input type="email" class="form-control" name="contactEmail" id="email" placeholder="Enter Your Email Address" required="true">
         </div>
         <div class="mb-3">
-            <label for="name" class="form-label">Your Phone Number</label>
-            <input type="number" class="form-control" id="phone" name="phone" 
+            <label for="number" class="form-label">Your Phone Number</label>
+            <input type="number" class="form-control" id="phone" name="contactPhone" 
                 minlength="10" maxlength="10" placeholder="Enter Your Phone Number" required=true >
         </div>
         <div class="mb-3">
             <label for="description" class="form-label">Describe what you want to contact me for here</label>
-            <textarea class="form-control" name="description" id="description" rows="3" placeholder="Your Message"></textarea>
+            <textarea class="form-control" name="contactDescription" id="description" rows="3" placeholder="Your Message"></textarea>
         </div>
         <div class="mb-3">
             <button type="submit" class="btn btn-danger mt-2" >Submit</button>
         </div>
+
+        <!-- <div>
+            <label for="phone">Enter your phone number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+        </div> -->
     </form>
 <%- include('partials/footer'); -%>
